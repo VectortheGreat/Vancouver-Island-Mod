@@ -1,0 +1,8 @@
+﻿DIPLOMACY = {
+	c:HBC = {
+		create_diplomatic_pact = {
+			country = c:VCI
+			type = dominion
+		}
+	}
+}

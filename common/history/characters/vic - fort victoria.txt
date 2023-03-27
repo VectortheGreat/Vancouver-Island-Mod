@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:VCI = {
+		create_character = {
+			first_name = Sir_James
+			last_name = Douglas
+			ruler = yes
+			birth_date = 1803.8.15
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				expert_colonial_administrator
+				basic_political_operator
+				wrathful
+				imperious
+			}
+		}
+	}
+}

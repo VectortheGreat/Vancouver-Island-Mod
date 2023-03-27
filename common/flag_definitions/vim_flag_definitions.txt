@@ -1,0 +1,7 @@
+﻿VCI = {
+	flag_definition = {
+		coa = VCI
+		subject_canton = VCI
+		priority = 1
+	}
+}

@@ -1,0 +1,14 @@
+﻿VCI = {
+	color = {
+		147
+		130
+		110
+	}
+	country_type = recognized
+	tier = principality
+	cultures = {
+		anglo_canadian
+		english
+	}
+	capital = STATE_VANCOUVER_ISLAND
+}
