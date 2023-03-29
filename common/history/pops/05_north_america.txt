@@ -1179,15 +1179,11 @@
 		region_state:VCI = {
 			create_pop = {
 				culture = salish
-				size = 5000
-			}
-			create_pop = {
-				culture = nootka
-				size = 4000
+				size = 1500
 			}
 			create_pop = {
 				culture = kwakiutl
-				size = 3500
+				size = 1000
 			}
 			create_pop = {
 				culture = scottish
@@ -1208,6 +1204,28 @@
 			create_pop = {
 				culture = yankee
 				size = 30
+			}
+		}
+		region_state:VMI = {
+			create_pop = {
+				culture = salish
+				size = 10000
+			}
+			create_pop = {
+				culture = nootka
+				size = 4000
+			}
+			create_pop = {
+				culture = kwakiutl
+				size = 3500
+			}
+			create_pop = {
+				culture = hawaiian
+				size = 40
+			}
+			create_pop = {
+				culture = metis
+				size = 40
 			}
 		}
 	}
@@ -1215,15 +1233,11 @@
 		region_state:VCI = {
 			create_pop = {
 				culture = salish
-				size = 5000
-			}
-			create_pop = {
-				culture = nootka
-				size = 4000
+				size = 2000
 			}
 			create_pop = {
 				culture = kwakiutl
-				size = 3500
+				size = 500
 			}
 			create_pop = {
 				culture = scottish
@@ -1246,28 +1260,18 @@
 				size = 30
 			}
 		}
-	}
-	s:SAN_JUAN_ISLANDS = {
-		region_state:VCI = {
+		region_state:VIM = {
 			create_pop = {
 				culture = salish
-				size = 5000
+				size = 12000
 			}
 			create_pop = {
 				culture = nootka
-				size = 4000
+				size = 5000
 			}
 			create_pop = {
 				culture = kwakiutl
-				size = 3500
-			}
-			create_pop = {
-				culture = scottish
-				size = 105
-			}
-			create_pop = {
-				culture = british
-				size = 100
+				size = 1500
 			}
 			create_pop = {
 				culture = hawaiian
@@ -1277,9 +1281,21 @@
 				culture = metis
 				size = 40
 			}
+		}
+	}
+	s:SAN_JUAN_ISLANDS = {
+		region_state:JNI = {
 			create_pop = {
-				culture = yankee
-				size = 30
+				culture = salish
+				size = 1000
+			}
+			create_pop = {
+				culture = nootka
+				size = 400
+			}
+			create_pop = {
+				culture = kwakiutl
+				size = 350
 			}
 		}
 	}

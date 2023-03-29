@@ -1070,16 +1070,31 @@ STATE_VANCOUVER_ISLAND = {
     city = "x24FAB0" #00
 
 
+
+
+
     port = "x6DFDD1" #03
+
+
+
 
 
     farm = "x34639F" #01
 
 
+
+
+
     mine = "x999E9B" #02
 
 
+
+
+
     wood = "x76CD59" #04
+
+
+
 
 
     arable_land = 15
@@ -1100,10 +1115,10 @@ STATE_VANCOUVER_ISLAND_SOUTH = {
     subsistence_building = "building_subsistence_farms"
     provinces = { "x64E0B4" "x2B750F" "xC0B693" "x7A8F60" "xE9AC75" "xC9A9AB" }
     city = "xC9A9AB"
-    port = "xE9AC75"
+    port = "xC0B693"
     farm = "x2B750F"
-    mine = "x7A8F60"
-    wood = "xC0B693"
+    mine = "x64E0B4"
+    wood = "xE9AC75"
     arable_land = 15
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -1120,10 +1135,10 @@ STATE_VANCOUVER_ISLAND_SOUTH = {
 SAN_JUAN_ISLANDS = {
     id = 995
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x4942AE" }
+    provinces = { "x4942AE" "xEC8C89" "xA2E3E6" }
     city = "x4942AE"
-    port = "x4942AE"
-    farm = "x4942AE"
+    port = "xEC8C89"
+    farm = "xA2E3E6"
     arable_land = 5
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {

@@ -802,34 +802,49 @@ STATES = {
 		create_state = {
 			country = c:VCI
 			owned_provinces = {
-				x6DFDD1 xFDF070 x34639F x24FAB0 x999E9B x76CD59
+				x6DFDD1
+			}
+		}
+		create_state = {
+			country = c:VMI
+			owned_provinces = {
+				xFDF070 x34639F x999E9B x76CD59 x24FAB0
 			}
 		}
 		add_homeland = anglo_canadian
 		add_homeland = british
 		add_homeland = scottish
+		add_claim = c:VCI
 	}
 	s:STATE_VANCOUVER_ISLAND_SOUTH = {	
 		create_state = {
 			country = c:VCI
 			owned_provinces = {
-				x64E0B4 x2B750F xC0B693 x7A8F60 xE9AC75 xC9A9AB
+				xC9A9AB
+			}
+		}
+		create_state = {
+			country = c:VIM
+			owned_provinces = {
+				x64E0B4 x2B750F xC0B693 x7A8F60 xE9AC75
 			}
 		}
 		add_homeland = anglo_canadian
 		add_homeland = british
 		add_homeland = scottish
+		add_claim = c:VCI
 	}
 	s:SAN_JUAN_ISLANDS = {
 		create_state = {
-			country = c:VCI
+			country = c:JNI
 			owned_provinces = {
-				x4942AE
+				x4942AE xEC8C89 xA2E3E6
 			}
 		}
 		add_homeland = anglo_canadian
 		add_homeland = british
 		add_homeland = scottish
+		add_claim = c:VCI
 	}
 	s:STATE_ALBERTA = {
 		create_state = {

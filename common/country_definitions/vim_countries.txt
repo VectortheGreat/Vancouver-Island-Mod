@@ -10,5 +10,36 @@
 		anglo_canadian
 		english
 	}
+	capital = STATE_VANCOUVER_ISLAND_SOUTH
+}
+
+VIM = {
+	color = { 80 84 138 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { salish }
+	capital = STATE_VANCOUVER_ISLAND_SOUTH
+}
+VMI = {
+	color = { 10 84 13 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { salish }
 	capital = STATE_VANCOUVER_ISLAND
+}
+JNI = {
+	color = { 180 4 138 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { salish }
+	capital = SAN_JUAN_ISLANDS
 }

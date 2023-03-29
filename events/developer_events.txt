@@ -250,8 +250,24 @@ dev.2 = {
 				owner = ROOT
 			}
 			create_building={
-				building="building_textile_mills"
-				level=200
+				building="building_port"
+				level=20
+			}
+			create_building={
+				building="building_wheat_farm"
+				level=20
+			}
+			create_building={
+				building="building_coal_mine"
+				level=20
+			}
+			create_building={
+				building="building_logging_camp"
+				level=20
+			}
+			create_building={
+				building="building_glassworks"
+				level=20
 			}
 		}
 	}

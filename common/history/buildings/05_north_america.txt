@@ -2318,11 +2318,61 @@
 	}
 	s:STATE_VANCOUVER_ISLAND = {
 		region_state:VCI = {
+			create_building = {
+				building = "building_barracks"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_artillery"
+					"pm_wound_dressing"
+					"pm_cavalry_scouts"
+					"pm_no_specialists"
+					"pm_line_infantry"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+		region_state:VMI = {
 			create_building={
 				building="building_wheat_farm"
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_vineyards" "pm_privately_owned" "pm_tools" "pm_soil_enriching_farming" }
+			}
+			create_building = {
+				building = "building_barracks"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_artillery"
+					"pm_wound_dressing"
+					"pm_cavalry_scouts"
+					"pm_no_specialists"
+					"pm_irregular_infantry"
+				}
+			}
+		}
+	}
+	s:STATE_VANCOUVER_ISLAND_SOUTH = {
+		region_state:VCI = {
+			create_building = {
+				building = "building_logging_camp"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+					"pm_privately_owned_building_logging_camp"
+				}
 			}
 			create_building = {
 				building = "building_barracks"
@@ -2345,20 +2395,12 @@
 				}
 			}
 		}
-	}
-	s:STATE_VANCOUVER_ISLAND_SOUTH = {
-		region_state:VCI = {
-			create_building = {
-				building = "building_logging_camp"
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					"pm_saw_mills"
-					"pm_no_hardwood"
-					"pm_no_equipment"
-					"pm_road_carts"
-					"pm_privately_owned_building_logging_camp"
-				}
+		region_state:VIM = {
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building = {
 				building = "building_barracks"
@@ -2369,13 +2411,31 @@
 					"pm_wound_dressing"
 					"pm_cavalry_scouts"
 					"pm_no_specialists"
-					"pm_line_infantry"
+					"pm_irregular_infantry"
 				}
 			}
 		}
 	}
 	s:SAN_JUAN_ISLANDS = {
-		region_state:VCI = {
+		region_state:JNI = {
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building = {
+				building = "building_barracks"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_artillery"
+					"pm_wound_dressing"
+					"pm_cavalry_scouts"
+					"pm_no_specialists"
+					"pm_irregular_infantry"
+				}
+			}
 		}
 	}
 	s:STATE_SASKATCHEWAN = {
