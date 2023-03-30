@@ -1,0 +1,38 @@
+﻿VCI = {
+	dynamic_country_name = {
+		name = dyn_c_fort_albert
+		adjective = dyn_c_fort_albert_adj
+		is_main_tag_only = yes
+		priority = 5
+		trigger = {
+			exists = c:VCI
+			c:VCI = {
+				has_variable = vim_fort_albert
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_camosack
+		adjective = dyn_c_camosack_adj
+		is_main_tag_only = yes
+		priority = 5
+		trigger = {
+			exists = c:VCI
+			c:VCI = {
+				has_variable = vim_camosack
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_vancouver_island
+		adjective = dyn_c_vancouver_island_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			exists = c:VCI
+			c:VCI = {
+				has_variable = vancouver_island_name
+			}
+		}
+	}
+}

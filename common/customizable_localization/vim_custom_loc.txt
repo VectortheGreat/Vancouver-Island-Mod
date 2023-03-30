@@ -1,21 +1,18 @@
-﻿newspaper_type = {
+﻿treaty_port_name = {
 	type = country
 	text = {
 		trigger = {
-			has_law = law_type:law_council_republic
+			has_variable = vim_fort_albert
 		}
-		localization_key = custom_newspaper_truth
+		localization_key = vim_fort_albert_key
 	}
 	text = {
 		trigger = {
-			has_law = law_type:law_council_republic
-			cu:russian = {
-				is_primary_culture_of = root
-			}
+			has_variable = vim_camosack
 		}
-		localization_key = custom_newspaper_pravda
+		localization_key = vim_camosack_key
 	}
 	text = {
-		localization_key = custom_generic_newspaper
+		localization_key = vim_fort_victoria_key
 	}
 }

@@ -26,15 +26,21 @@ vim.1 = {
 	option = {
 		name = vim.1.a
 		set_variable = vim_fort_albert
+		remove_variable = vim_fort_victoria
+		remove_variable = vim_camosack
 	}
 	option = {
 		name = vim.1.b
 		default_option = yes
 		set_variable = vim_fort_victoria
+		remove_variable = vim_fort_albert
+		remove_variable = vim_camosack
 	}
 	option = {
 		name = vim.1.c
 		set_variable = vim_camosack
+		remove_variable = vim_fort_victoria
+		remove_variable = vim_fort_albert
 	}
 }
 
@@ -118,6 +124,9 @@ vim.3 = {
 		name = vim.2.a
 		default_option = yes
 		set_variable = vancouver_island_name
+		remove_variable = vim_fort_albert
+		remove_variable = vim_fort_victoria
+		remove_variable = vim_camosack
 	}
 }
 
