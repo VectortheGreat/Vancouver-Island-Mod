@@ -41,5 +41,5 @@ JNI = {
 	tier = principality
 	
 	cultures = { salish }
-	capital = SAN_JUAN_ISLANDS
+	capital = STATE_SAN_JUAN_ISLANDS
 }

@@ -2416,7 +2416,7 @@
 			}
 		}
 	}
-	s:SAN_JUAN_ISLANDS = {
+	s:STATE_SAN_JUAN_ISLANDS = {
 		region_state:JNI = {
 			create_building={
 				building="building_fishing_wharf"

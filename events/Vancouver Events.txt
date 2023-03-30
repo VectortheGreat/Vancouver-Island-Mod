@@ -1,0 +1,934 @@
+﻿namespace = vim
+vim.1 = {
+	#Treaty Port Name
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.1.t
+	desc = vim.1.dsc
+	flavor = vim.1.f
+	duration = 1
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		NOT = {
+			has_variable = vim_selected_capital_name
+		}
+	}
+	immediate = {
+		set_variable = vim_selected_capital_name
+	}
+	option = {
+		name = vim.1.a
+		set_variable = vim_fort_albert
+	}
+	option = {
+		name = vim.1.b
+		default_option = yes
+		set_variable = vim_fort_victoria
+	}
+	option = {
+		name = vim.1.c
+		set_variable = vim_camosack
+	}
+}
+
+vim.2 = {
+	#Catholic Missionaries Arrive
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1838.9.1
+		NOT = {
+			has_variable = vim_event_2
+		}
+	}
+	immediate = {
+		set_variable = vim_event_2
+	}
+	option = {
+		name = vim.2.a
+		default_option = yes
+		add_journal_entry = {
+			type = vim_catholic_missionaries
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = vim_catholic_missionaries_strength
+				year = 15
+			}
+		}
+		add_modifier = {
+			name = vim_radical_minorities
+			year = 15
+		}
+	}
+	option = {
+		name = vim.2.b
+		add_modifier = {
+			name = vim_minority_rights
+			year = 15
+		}
+	}
+}
+
+vim.3 = {
+	#The Drafting and Signing of the Douglas Treaties
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		year < 1850
+		NOT = {
+			has_variable = vim_event_3
+		}
+	}
+	immediate = {
+		set_variable = vim_event_3
+	}
+	option = {
+		name = vim.2.a
+		default_option = yes
+		set_variable = vancouver_island_name
+	}
+}
+
+vim.4 = {
+	#Legislative assembly established
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1856.9.1
+		NOT = {
+			has_variable = vim_event_4
+		}
+	}
+	immediate = {
+		set_variable = vim_event_4
+	}
+	option = {
+		name = vim.2.a
+		default_option = yes
+	}
+}
+
+vim.5 = {
+	#British Colonist paper in print 
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1858.1.1
+		NOT = {
+			has_variable = vim_event_5
+		}
+	}
+	immediate = {
+		set_variable = vim_event_5
+	}
+	option = {
+		name = vim.2.a
+		create_character = {
+			is_general = yes
+			interest_group = ig_armed_forces
+			ig_leader = no
+			noble = no
+			traits = {
+				reckless
+			}
+		}
+	}
+}
+
+vim.6 = {
+	#Thousands of American gold miners arrive
+	type = country_event
+	placement = scope:vim_gold_mine_state
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1858.6.1
+		NOT = {
+			has_law = law_type:law_closed_borders
+		}
+		any_scope_state = {
+			has_building = building_gold_mine
+		}
+		NOT = {
+			has_variable = vim_event_6
+		}
+	}
+	immediate = {
+		set_variable = vim_event_6
+		random_scope_state = {
+			limit = {
+				owner = c:VCI
+				has_building = building_gold_mine
+			}
+			save_scope_as = vim_gold_mine_state
+		}
+		scope:vim_gold_mine_state = {
+			create_pop = {
+				pop_type = labors
+				culture = cu:han
+				size = 300
+			}
+		}
+	}
+	option = {
+		name = vim.2.a
+		add_treasury = 50000
+		add_loyalists = {
+			culture = cu:han
+			value = 0.05
+		}
+	}
+	option = {
+		name = vim.2.a
+		default_option = yes
+		add_treasury = -50000
+		if = {
+			limit = {
+				exists = c:USA
+			}
+			change_relations = {
+				country = c:USA
+				value = -10
+			}
+		}
+		if = {
+			limit = {
+				exists = c:CSA
+			}
+			change_relations = {
+				country = c:CSA
+				value = -10
+			}
+		}
+		scope:vim_gold_mine_state = {
+			add_modifier = {
+				name = vim_immigrants
+				year = 10
+			}
+			create_pop = {
+				pop_type = labors
+				culture = cu:han
+				size = 1000
+			}
+			create_pop = {
+				pop_type = labors
+				culture = cu:dixie
+				size = 3000
+			}
+		}
+	}
+}
+
+vim.7 = {
+	#Douglas bans liquor sales to Indigenous peoples, appoints regional constables
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1858.8.1
+		NOT = {
+			has_law = law_type:law_no_police
+		}
+		has_consumption_tax = g:liquor
+		NOT = {
+			has_variable = vim_event_7
+		}
+	}
+	immediate = {
+		set_variable = vim_event_7
+	}
+	option = {
+		name = vim.2.a
+		add_modifier = {
+			name = vim_ban_liquor
+			year = 10
+		}
+	}
+}
+
+vim.8 = {
+	#800 Freed slaves arrive as settlers
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1858.8.1
+		NOT = {
+			has_variable = vim_event_8
+		}
+	}
+	immediate = {
+		set_variable = vim_event_8
+	}
+	option = {
+		name = vim.2.a
+		add_modifier = {
+			name = vim_freed_slaves
+			year = 10
+		}
+		create_pop = {
+			pop_type = peasants
+			size = 800
+		}
+	}
+}
+
+vim.9 = {
+	#Pig War
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1859.6.1
+		NOT = {
+			has_variable = vim_event_9
+		}
+	}
+	immediate = {
+		set_variable = vim_event_9
+		s:SAN_JUAN_ISLANDS = {
+			add_claim = c:USA
+		}
+	}
+	option = {
+		name = vim.2.a
+		show_as_tooltip = {
+			s:SAN_JUAN_ISLANDS = {
+				add_claim = c:USA
+			}
+		}
+		c:USA = {
+			create_diplomatic_play = {
+				name = sepoy_mutiny
+				type = dp_return_state
+				war = yes
+				target_state = s:SAN_JUAN_ISLANDS.region_state:VCI
+			}
+		}
+	}
+}
+
+vim.10 = {
+	#Prince Lot Kamehameha visits
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		exists = c:HAW
+		game_date < 1860.1.1
+		NOT = {
+			has_variable = vim_event_10
+		}
+	}
+	immediate = {
+		set_variable = vim_event_10
+	}
+	option = {
+		name = vim.2.a
+		if = {
+			limit = {
+				exists = c:HAW
+				c:VCI = {
+					NOT = {
+						has_diplomatic_pact = {
+							who = c:HAW
+							type = trade_agreement
+						}
+					}
+				}
+			}
+			create_diplomatic_pact = {
+				country = c:HAW
+				type = trade_agreement
+			}
+		}
+		change_relations = {
+			country = c:HAW
+			value = 20
+		}
+		create_pop = {
+			culture = cu:hawaiian
+			size = 1000
+		}
+	}
+	option = {
+		name = vim.2.a
+		change_relations = {
+			country = c:HAW
+			value = -40
+		}
+		create_pop = {
+			culture = cu:hawaiian
+			size = 5000
+		}
+	}
+	option = {
+		name = vim.2.a
+		change_relations = {
+			country = c:HAW
+			value = 10
+		}
+		create_pop = {
+			culture = cu:hawaiian
+			size = 100
+		}
+		add_treasury = -10000
+		add_modifier = {
+			name = vim_celebrate
+			year = 10
+		}
+	}
+}
+
+vim.11 = {
+	#Massive smallpox outbreak
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1862.3.1
+		NOT = {
+			has_variable = vim_event_11
+		}
+	}
+	immediate = {
+		set_variable = vim_event_11
+	}
+	option = {
+		name = vim.2.a
+		add_treasury = -50000
+		every_scope_state = {
+			limit = {
+				state_region = s:STATE_VANCOUVER_ISLAND
+				state_region = s:STATE_VANCOUVER_ISLAND_SOUTH
+				state_region = s:STATE_SAN_JUAN_ISLANDS
+			}
+			create_pop = {
+				size = -1000
+			}
+		}
+	}
+	option = {
+		name = vim.2.a
+		every_scope_state = {
+			limit = {
+				state_region = s:STATE_VANCOUVER_ISLAND
+				state_region = s:STATE_VANCOUVER_ISLAND_SOUTH
+				state_region = s:STATE_SAN_JUAN_ISLANDS
+			}
+			add_radicals = {
+				value = 0.15
+			}
+			create_pop = {
+				size = -3000
+			}
+		}
+	}
+	option = {
+		name = vim.2.a
+		every_scope_state = {
+			limit = {
+				state_region = s:STATE_VANCOUVER_ISLAND
+				state_region = s:STATE_VANCOUVER_ISLAND_SOUTH
+				state_region = s:STATE_SAN_JUAN_ISLANDS
+			}
+			create_pop = {
+				size = -7000
+			}
+		}
+	}
+}
+
+vim.12 = {
+	#Kwong Lee and Co. commence operations in Victoria
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1861.2.1
+		NOT = {
+			has_variable = vim_event_12
+		}
+	}
+	immediate = {
+		set_variable = vim_event_12
+	}
+	option = {
+		name = vim.2.a
+	}
+}
+
+vim.13 = {
+	#American Civil War begins, Douglas advocates for invasion of Washington state 
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1861.4.12
+		c:USA = {
+			has_war_with = c:CSA
+		}
+		NOT = {
+			has_variable = vim_event_13
+		}
+	}
+	immediate = {
+		set_variable = vim_event_13
+	}
+	option = {
+		name = vim.2.a
+		change_relations = {
+			country = c:USA
+			value = -80
+		}
+		add_radicals = {
+			value = 0.1
+			culture = cu:dixie
+		}
+		create_diplomatic_play = {
+			name = sepoy_mutiny
+			type = dp_return_state
+			war = yes
+			target_state = s:SAN_JUAN_ISLANDS.region_state:USA
+			add_war_goal = {
+				holder = ROOT
+				type = dp_conquer_state
+				target_state = s:STATE_WASHINGTON.region_state:USA
+			}
+		}
+	}
+	option = {
+		name = vim.2.a
+		change_relations = {
+			country = c:USA
+			value = 25
+		}
+		if = {
+			limit = {
+				exists = c:USA
+				c:VCI = {
+					NOT = {
+						has_diplomatic_pact = {
+							who = c:USA
+							type = trade_agreement
+						}
+					}
+				}
+			}
+			create_diplomatic_pact = {
+				country = c:USA
+				type = trade_agreement
+			}
+		}
+	}
+}
+
+vim.14 = {
+	#Gold struck in Sooke
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1864.8.1
+		NOT = {
+			has_variable = vim_event_14
+		}
+	}
+	immediate = {
+		set_variable = vim_event_14
+	}
+	option = {
+		name = vim.2.a
+		add_journal_entry = {
+			type = vim_gold_mines
+		}
+	}
+}
+
+vim.15 = {
+	#1000 Chinese miners, 1,000 English and American miners for Sooke
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1865.3.1
+		s:STATE_VANCOUVER_ISLAND_SOUTH = {
+			has_building = building_gold_mine
+		}
+		NOT = {
+			has_variable = vim_event_15
+		}
+	}
+	immediate = {
+		set_variable = vim_event_15
+	}
+	option = {
+		name = vim.2.a
+		s:STATE_VANCOUVER_ISLAND_SOUTH = {
+			create_pop = {
+				pop_type = labors
+				culture = cu:han
+				size = 1000
+			}
+			create_pop = {
+				pop_type = labors
+				culture = cu:dixie
+				size = 1000
+			}
+		}
+	}
+}
+
+vim.16 = {
+	#Strike at Nanaimo Coal mines over Chinese labor
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1867.5.1
+		s:STATE_VANCOUVER_ISLAND_SOUTH = {
+			has_building = building_coal_mine
+		}
+		NOT = {
+			has_variable = vim_event_16
+		}
+	}
+	immediate = {
+		set_variable = vim_event_16
+	}
+	option = {
+		name = vim.2.a
+		s:STATE_VANCOUVER_ISLAND_SOUTH = {
+			every_scope_building = {
+				limit = {
+					is_building_type = building_coal_mine
+				}
+				add_modifier = {
+					name = vim_chinese_strikes
+					year = 15
+				}
+			}
+			add_radicals = {
+				value = 0.2
+				culture = cu:han
+				pop_type = labors
+			}
+		}
+	}
+}
+
+vim.17 = {
+	#Telegraph with HK, Shanghai and Singapore
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1871.6.1
+		NOT = {
+			has_variable = vim_event_17
+		}
+	}
+	immediate = {
+		set_variable = vim_event_17
+	}
+	option = {
+		name = vim.2.a
+		add_journal_entry = {
+			type = vim_chinese_migration
+		}
+	}
+}
+
+vim.18 = {
+	#Amor De Cosmos in power
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1872.2.1
+		NOT = {
+			has_variable = vim_event_18
+		}
+	}
+	immediate = {
+		set_variable = vim_event_18
+	}
+	option = {
+		name = vim.2.a
+		create_character = {
+			is_general = yes
+			interest_group = ig_armed_forces
+			ig_leader = no
+			noble = no
+			traits = {
+				reckless
+			}
+		}
+	}
+}
+
+vim.19 = {
+	#Racial violence in California causes mass immigration of Chinese workers
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1876.6.1
+		c:VCI = {
+			owns_entire_state_region = STATE_CALIFORNIA
+		}
+		NOT = {
+			has_variable = vim_event_18
+		}
+	}
+	immediate = {
+		set_variable = vim_event_18
+	}
+	option = {
+		name = vim.2.a
+		s:STATE_CALIFORNIA = {
+			add_radicals = {
+				value = 0.15
+			}
+		}
+	}
+}
+
+vim.20 = {
+	#Anti-Chinese Workingmens meetings being held regularly, DeCosmos a frequent speaker 
+	type = country_event
+	placement = IMP
+	event_image = {
+		video = "gfx/event_pictures/unspecific_trains.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = vim.2.t
+	desc = vim.2.dsc
+	flavor = vim.2.f
+	duration = 3
+	trigger = {
+		exists = c:VCI
+		THIS = c:VCI
+		game_date < 1879.9.1
+		NOT = {
+			has_variable = vim_event_18
+		}
+	}
+	immediate = {
+		set_variable = vim_event_18
+	}
+	option = {
+		name = vim.2.a
+	}
+}
